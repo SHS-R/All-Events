@@ -44,7 +44,16 @@
       "name": "Child Life Supervisor Flyer.pdf",
       "pdf": "fmv9sna2hnbd2m.pdf",
       "thumb": "fmv9sna2hnbd2m.jpg",
-      "sessions": [],
+      "sessions": [
+        {
+          "date": "2026-01-25",
+          "times": [
+            "7:00 PM"
+          ],
+          "label": "",
+          "source": ""
+        }
+      ],
       "extras": [],
       "noText": true,
       "added": "2026-10-15T17:09:33.497Z"
