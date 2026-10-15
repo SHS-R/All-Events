@@ -215,7 +215,16 @@
       "name": "Boo at the U 2.pdf",
       "pdf": "fmv9tsz05dvmnt.pdf",
       "thumb": "fmv9tsz05dvmnt.jpg",
-      "sessions": [],
+      "sessions": [
+        {
+          "date": "2026-10-15",
+          "times": [
+            "6:00 PM"
+          ],
+          "label": "",
+          "source": ""
+        }
+      ],
       "extras": [],
       "noText": true,
       "added": "2026-10-15T17:41:58.709Z"
