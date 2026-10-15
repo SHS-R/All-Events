@@ -226,7 +226,16 @@
       "name": "First Gen Friday PDF.pdf",
       "pdf": "fmv9tsz9fboabn.pdf",
       "thumb": "fmv9tsz9fboabn.jpg",
-      "sessions": [],
+      "sessions": [
+        {
+          "date": "2026-11-15",
+          "times": [
+            "11 AM"
+          ],
+          "label": "First-Gen Fridays",
+          "source": ""
+        }
+      ],
       "extras": [],
       "noText": true,
       "added": "2026-10-15T17:41:59.043Z"
