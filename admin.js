@@ -42,7 +42,7 @@ function textToB64(s){ return bytesToB64(new TextEncoder().encode(s)); }
 
 async function fetchList(){
   try {
-    const txt = await gh(repoPath() + '/contents/data/flyers.json?ref=' + encodeURIComponent(cfg.branch), { headers: { 'Accept': 'application/vnd.github.raw+json' }, raw: true });
+    const txt = await gh(repoPath() + '/contents/flyers.json?ref=' + encodeURIComponent(cfg.branch), { headers: { 'Accept': 'application/vnd.github.raw+json' }, raw: true });
     return (JSON.parse(txt) || {}).flyers || [];
   } catch(e){ if (e.status === 404) return []; throw e; }
 }
@@ -65,7 +65,7 @@ async function commitFiles(files, message){
 
 function listFile(list){
   const clean = list.map(it=>{ const o = {}; for (const k in it) if (k[0] !== '_') o[k] = it[k]; return o; });
-  return { path: 'data/flyers.json', b64: textToB64(JSON.stringify({ flyers: clean }, null, 2) + '\n') };
+  return { path: 'flyers.json', b64: textToB64(JSON.stringify({ flyers: clean }, null, 2) + '\n') };
 }
 
 // Re-reads the latest list from GitHub, applies the change, and saves it with any extra files in one commit.
@@ -181,7 +181,7 @@ async function addFiles(fileList){
     try {
       const r = await readPdf(f);
       const id = newId();
-      const item = { id, name: f.name, pdf: 'flyers/' + id + '.pdf', thumb: 'flyers/' + id + '.jpg',
+      const item = { id, name: f.name, pdf: id + '.pdf', thumb: id + '.jpg',
         sessions: r.found.sessions, extras: r.found.extras, noText: r.noText, added: new Date().toISOString(),
         _thumbData: r.thumbData, _pdfData: r.bytes };
       added.push(item);
@@ -269,7 +269,7 @@ $('ed-remove').addEventListener('click', async ()=>{
   if (!removeArmed){ removeArmed = true; $('ed-remove').textContent = 'Click again to remove'; return; }
   const it = editing;
   $('ed-remove').disabled = true;
-  const gone = [it.pdf, it.thumb].filter(p=>p && /^flyers\//.test(p)).map(p=>({ path: p, remove: true }));
+  const gone = [it.pdf, it.thumb].filter(p=>p && /^f[a-z0-9-]+\.(pdf|jpg)$/.test(p)).map(p=>({ path: p, remove: true }));
   let ok = await saveChange(list=>list.filter(x=>x.id !== it.id), gone, 'Remove flyer: ' + it.name);
   if (!ok && gone.length){ ok = await saveChange(list=>list.filter(x=>x.id !== it.id), [], 'Remove flyer: ' + it.name); }   // files may already be gone
   $('ed-remove').disabled = false;

@@ -23,7 +23,7 @@ function thumbSrc(it){ return it._thumbData || it.thumb || ''; }
 
 async function loadPublicList(){
   try {
-    const r = await fetch('data/flyers.json?t=' + Date.now(), { cache: 'no-store' });
+    const r = await fetch('flyers.json?t=' + Date.now(), { cache: 'no-store' });
     if (!r.ok) throw new Error(r.status);
     EA.items = ((await r.json()) || {}).flyers || [];
   } catch(e){ EA.loadError = true; EA.items = []; }
