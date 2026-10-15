@@ -57,6 +57,82 @@
       "extras": [],
       "noText": true,
       "added": "2026-10-15T17:09:33.497Z"
+    },
+    {
+      "id": "fmv9sxazcie5nq",
+      "name": "Child Life and Technology.pdf",
+      "pdf": "fmv9sxazcie5nq.pdf",
+      "thumb": "fmv9sxazcie5nq.jpg",
+      "sessions": [
+        {
+          "date": "2026-11-16",
+          "times": [
+            "7:00 PM"
+          ],
+          "label": "TECHNOLOGY",
+          "source": "16 NOV"
+        }
+      ],
+      "extras": [],
+      "noText": false,
+      "added": "2026-10-15T17:17:21.240Z"
+    },
+    {
+      "id": "fmv9sxb3970h1r",
+      "name": "Child Life Advising Panel.pdf",
+      "pdf": "fmv9sxb3970h1r.pdf",
+      "thumb": "fmv9sxb3970h1r.jpg",
+      "sessions": [
+        {
+          "date": "2026-10-19",
+          "times": [
+            "7:00 PM"
+          ],
+          "label": "Meeting ID: 5370808128",
+          "source": "19 October, 2026 At 7:00 PM"
+        }
+      ],
+      "extras": [],
+      "noText": false,
+      "added": "2026-10-15T17:17:21.381Z"
+    },
+    {
+      "id": "fmv9sxbvkf77gh",
+      "name": "Child Life VolunteerPre.pdf",
+      "pdf": "fmv9sxbvkf77gh.pdf",
+      "thumb": "fmv9sxbvkf77gh.jpg",
+      "sessions": [
+        {
+          "date": "2027-03-22",
+          "times": [
+            "7:00 PM"
+          ],
+          "label": "building your hours now.",
+          "source": "MAR 22"
+        }
+      ],
+      "extras": [],
+      "noText": false,
+      "added": "2026-10-15T17:17:22.400Z"
+    },
+    {
+      "id": "fmv9sxc4atykwu",
+      "name": "Child Life graduates Zoom panel flyer.pdf",
+      "pdf": "fmv9sxc4atykwu.pdf",
+      "thumb": "fmv9sxc4atykwu.jpg",
+      "sessions": [
+        {
+          "date": "2027-01-25",
+          "times": [
+            "7:00 PM"
+          ],
+          "label": "students",
+          "source": "January 25"
+        }
+      ],
+      "extras": [],
+      "noText": false,
+      "added": "2026-10-15T17:17:22.714Z"
     }
   ]
 }
