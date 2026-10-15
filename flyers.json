@@ -177,7 +177,16 @@
       "name": "Virtual Career Night.pdf",
       "pdf": "fmv9t6ocmt5a80.pdf",
       "thumb": "fmv9t6ocmt5a80.jpg",
-      "sessions": [],
+      "sessions": [
+        {
+          "date": "2026-11-05",
+          "times": [
+            "6:00 PM"
+          ],
+          "label": "Human Sciences Virtual Career Night",
+          "source": ""
+        }
+      ],
       "extras": [],
       "noText": true,
       "added": "2026-10-15T17:24:38.470Z"
