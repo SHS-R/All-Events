@@ -8,7 +8,10 @@
       "sessions": [
         {
           "date": "2026-11-10",
-          "times": ["12:20 PM – 1:00 PM (In person)", "6:30 PM (Online)"],
+          "times": [
+            "12:20 PM – 1:00 PM (In person)",
+            "6:30 PM (Online)"
+          ],
           "label": "Undergraduate Info Session",
           "source": "TUESDAY NOV 10"
         }
@@ -16,6 +19,25 @@
       "extras": [],
       "noText": false,
       "added": "2026-10-15T15:34:37.601Z"
+    },
+    {
+      "id": "fmv9sjj2xa41ge",
+      "name": "Child Life Demonstration.pdf",
+      "pdf": "fmv9sjj2xa41ge.pdf",
+      "thumb": "fmv9sjj2xa41ge.jpg",
+      "sessions": [
+        {
+          "date": "2027-04-19",
+          "times": [
+            "0:00 PM"
+          ],
+          "label": "ADMIT",
+          "source": "ADMIT APR 19"
+        }
+      ],
+      "extras": [],
+      "noText": false,
+      "added": "2026-10-15T17:06:38.553Z"
     }
   ]
 }
