@@ -1,0 +1,53 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Events Available</title>
+<meta name="description" content="Upcoming events, sorted by month. Click a flyer to open it.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,700&family=Public+Sans:wght@400;500;600&display=swap">
+<link rel="stylesheet" href="assets/style.css">
+<style>
+  html { color-scheme: light; }
+  body { margin: 0; }
+  img { max-width: 100%; }
+  [hidden] { display: none !important; }
+</style>
+</head>
+<body>
+<div class="wrap">
+  <header class="top">
+    <div>
+      <h1>Events Available</h1>
+      <p class="sub">This month comes first. Use the tabs to see what is coming up or what already happened. Click a flyer to open it.</p>
+    </div>
+  </header>
+  <main id="board"><div class="empty"><p>Loading events…</p></div></main>
+</div>
+
+<div class="overlay" id="vOverlay" hidden>
+  <div class="viewer" role="dialog" aria-modal="true" aria-labelledby="v-title">
+    <div class="viewer-head">
+      <div class="info">
+        <h3 id="v-title"></h3>
+        <div class="meta" id="v-meta"></div>
+        <div class="alldates" id="v-all"></div>
+      </div>
+      <div class="actions">
+        <a class="btn" id="v-newtab" target="_blank" rel="noopener">Open in new tab</a>
+        <button class="btn primary" id="v-close" type="button">Close</button>
+      </div>
+    </div>
+    <div class="viewer-body" id="v-body"></div>
+  </div>
+</div>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/pdf.js/3.11.174/pdf.min.js"></script>
+<script src="assets/board.js"></script>
+<script>
+  loadPublicList().then(renderBoard);
+</script>
+</body>
+</html>

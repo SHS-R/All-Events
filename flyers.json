@@ -1,0 +1,21 @@
+{
+  "flyers": [
+    {
+      "id": "f-nov10-info-session",
+      "name": "Child Life Info Session Flyer Nov 10.pdf",
+      "pdf": "flyers/f-nov10-info-session.pdf",
+      "thumb": "flyers/f-nov10-info-session.jpg",
+      "sessions": [
+        {
+          "date": "2026-11-10",
+          "times": ["12:20 PM – 1:00 PM (In person)", "6:30 PM (Online)"],
+          "label": "Undergraduate Info Session",
+          "source": "TUESDAY NOV 10"
+        }
+      ],
+      "extras": [],
+      "noText": false,
+      "added": "2026-10-15T15:34:37.601Z"
+    }
+  ]
+}

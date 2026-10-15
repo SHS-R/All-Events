@@ -1,0 +1,109 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="robots" content="noindex, nofollow">
+<title>Events Available Admin</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,700&family=Public+Sans:wght@400;500;600&display=swap">
+<link rel="stylesheet" href="assets/style.css">
+<style>
+  html { color-scheme: light; }
+  body { margin: 0; }
+  img { max-width: 100%; }
+  [hidden] { display: none !important; }
+</style>
+</head>
+<body>
+<div class="wrap">
+  <header class="top">
+    <div>
+      <h1>Events Available</h1>
+      <p class="sub" id="sub">Editor page. Add event flyers as PDFs; each date on a flyer gets its own card under its month.</p>
+    </div>
+    <div class="actions">
+      <span id="ownerActions" hidden>
+        <label class="btn primary" for="file">Add PDFs</label>
+        <input id="file" type="file" accept="application/pdf,.pdf" multiple>
+      </span>
+    </div>
+  </header>
+
+  <section class="setup" id="setup" hidden aria-labelledby="setup-h">
+    <h2 id="setup-h">Unlock editing on this device</h2>
+    <p>Only someone with your GitHub access key can change this site. The key is kept in this browser only and is sent to nobody except GitHub.</p>
+    <div class="row2">
+      <div class="field"><label for="cfg-owner">GitHub username</label><input id="cfg-owner" type="text" autocomplete="off" spellcheck="false"></div>
+      <div class="field"><label for="cfg-repo">Repository name</label><input id="cfg-repo" type="text" autocomplete="off" spellcheck="false"></div>
+    </div>
+    <div class="field">
+      <label for="cfg-token">Access key</label>
+      <input id="cfg-token" type="password" autocomplete="off" spellcheck="false" placeholder="github_pat_…">
+      <span class="hint">A fine-grained personal access token with Contents: Read and write on this repository only. The README explains how to make one.</span>
+    </div>
+    <div class="actions"><button class="btn primary" id="cfg-save" type="button">Unlock editing</button></div>
+    <div id="cfg-err" class="fname" style="color:var(--warn)"></div>
+  </section>
+
+  <div class="ownerbar" id="ownerbar" hidden>
+    <span id="ownerbarText"></span>
+    <span class="actions">
+      <a class="btn small" href="./" target="_blank" rel="noopener">Open public page</a>
+      <button class="btn small" id="lockBtn" type="button">Lock this device</button>
+    </span>
+  </div>
+  <div id="notices"></div>
+  <main id="board" hidden></main>
+</div>
+
+<div class="drop" id="drop" hidden>Drop PDFs to add them</div>
+
+<div class="overlay" id="overlay" hidden>
+  <div class="panel" role="dialog" aria-modal="true" aria-labelledby="ed-title">
+    <div class="ed-top">
+      <div class="mini" id="ed-img"></div>
+      <div class="info">
+        <h3 id="ed-title"></h3>
+        <div id="ed-found" class="fname"></div>
+      </div>
+    </div>
+    <div>
+      <div class="eyebrow" style="margin-bottom:8px">Dates and times on this flyer</div>
+      <div class="srows" id="srows"></div>
+      <div class="row" style="margin-top:10px"><button class="btn small" id="ed-add" type="button">Add another date</button></div>
+    </div>
+    <div class="row">
+      <button class="btn primary" id="ed-save" type="button">Save</button>
+      <button class="btn" id="ed-open" type="button">Open PDF</button>
+      <button class="btn" id="ed-cancel" type="button">Cancel</button>
+      <button class="btn danger" id="ed-remove" type="button">Remove flyer</button>
+    </div>
+    <div id="ed-err" class="fname" style="color:var(--warn)"></div>
+  </div>
+</div>
+
+<div class="overlay" id="vOverlay" hidden>
+  <div class="viewer" role="dialog" aria-modal="true" aria-labelledby="v-title">
+    <div class="viewer-head">
+      <div class="info">
+        <h3 id="v-title"></h3>
+        <div class="meta" id="v-meta"></div>
+        <div class="alldates" id="v-all"></div>
+      </div>
+      <div class="actions">
+        <a class="btn" id="v-newtab" target="_blank" rel="noopener">Open in new tab</a>
+        <button class="btn primary" id="v-close" type="button">Close</button>
+      </div>
+    </div>
+    <div class="viewer-body" id="v-body"></div>
+  </div>
+</div>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/pdf.js/3.11.174/pdf.min.js"></script>
+<script src="assets/board.js"></script>
+<script src="assets/detect.js"></script>
+<script src="assets/admin.js"></script>
+</body>
+</html>
