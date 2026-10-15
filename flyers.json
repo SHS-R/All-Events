@@ -139,7 +139,16 @@
       "name": "Grad fair pdf.pdf",
       "pdf": "fmv9t6o4cgbt4l.pdf",
       "thumb": "fmv9t6o4cgbt4l.jpg",
-      "sessions": [],
+      "sessions": [
+        {
+          "date": "2026-11-03",
+          "times": [
+            "11:00 AM"
+          ],
+          "label": "COPE Grad Fair",
+          "source": ""
+        }
+      ],
       "extras": [],
       "noText": true,
       "added": "2026-10-15T17:24:38.173Z"
